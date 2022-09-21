@@ -3,7 +3,7 @@
 []: # © 2022 Nguyễn Hữu Khoa x Lê Thảo Quyên
 []: # Version: 1.0.0
 []: # Date: 21 - 09 - 2022
-[]: # Description: Chương trình tự động tính thuế thu nhập cá nhân
+[]: # Description: A small exercise of the Information Systems subject at school
 ```
 If the program crashes, please go through these steps:
 1. Check if python 3.x is installed and path is set correctly  

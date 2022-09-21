@@ -1,9 +1,9 @@
-# A script for Calulating "Personal income". Driven by python
+# Chương trình tính thuế thu nhập cá nhân
 ```
 []: # © 2022 Nguyễn Hữu Khoa x Lê Thảo Quyên
 []: # Version: 1.0.0
 []: # Date: 21 - 09 - 2022
-[]: # Description: A small exercise of the Information Systems subject at school
+[]: # Description: Một bài tập nhỏ của môn học Hệ thống thông tin ở trường
 ```
 If the program crashes, please go through these steps:
 1. Check if python 3.x is installed and path is set correctly  

@@ -5,30 +5,38 @@
 []: # Date: 21 - 09 - 2022
 []: # Description: Một bài tập nhỏ của môn học Hệ thống thông tin ở trường
 ```
-If the program crashes, please go through these steps:
-1. Check if python 3.x is installed and path is set correctly  
-2. Check if the dependency packages are installed.  
-3. Check if the input parameters are wrong.  
+Nếu chương trình chạy không thành công, hãy xem lần lượt thử các bước sau:
+1. Kiểm tra xem Python 3.x đã được cài đặt hay chưa và PATH đã được chỉnh đúng địa chỉ chưa 
+2. Kiểm tra xem các packages phụ thuộc đã được cài đặt chưa
+3. Kiểm tra xem các thông số đầu vào có sai không.
+4. Nếu vẫn không được, hãy liên hệ với tác giả qua email: **nguyenkhoa376@duck.com**
 
-
-## The operating environment
+## Môi trường hoạt động
 
 ```
 Windows
 python 3.x
 ```
 
-## How to use
+## Hướng dẫn sử dụng
 
-Double-click run.bat or run `python main.py` with administrator privileges
+1. Mở terminal
+2. Chạy lệnh `python main.py` với quyền admin
+3. Nhập các thông số đầu vào
+4. Xem kết quả.
 
-After doing what the program asks you will get a statistics table like below along with the txt file in the ```output/{your_name}``` folder
+Hoặc chỉ đơn giản là mở file ```run.bat``` với quyền admin
+
+Sau khi chương trình kết thúc, bạn sẽ nhận được file txt chứa kết quả theo đường dẫn ```output/{your_name}``` với ```{your_name}``` là tên bạn nhập vào.
+
+![](https://img.upanh.tv/2022/09/21/image3a1dceed65d66f85.png "Output file address")
+
+
+Kết quả thu được sau khi chạy chương trình
 
 ![Display U can see](https://img.upanh.tv/2022/09/21/image44af2b60639a8118.png "Display you can see after all")
 
 
-![](https://img.upanh.tv/2022/09/21/image3a1dceed65d66f85.png "Output file address")
-
-## Extra
-Give a ⭐️ if this project helped you!
+## Bổ sung
+Tặng tôi ⭐️ nếu bạn thấy chương trình hữu ích nhé :D
 

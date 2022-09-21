@@ -1,4 +1,5 @@
 # Chương trình tính thuế thu nhập cá nhân
+[Tiếng Anh](https://github.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/tree/master) | **Tiếng Việt**
 ```
 []: # © 2022 Nguyễn Hữu Khoa x Lê Thảo Quyên
 []: # Version: 1.0.0

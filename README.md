@@ -34,7 +34,7 @@ The program is written based on the Vietnamese tax law.
 ## How to use
 
 Open Terminal or Command Prompt and type the following command:
-`pip install prettytable`
+`pip install -r requirements.txt`
 
 Then run the program by typing the following command `python main.py` or double-clicking the file `run.bat` with administrator privileges.
 

@@ -23,6 +23,7 @@ def main():
             print("Chương trình tính thuế thu nhập cá nhân")
             print()
             ten_nguoi_tinh_thue = input("Nhập tên của bạn: ")
+
             cal_from_file(ten_nguoi_tinh_thue)
             break
 
@@ -31,6 +32,7 @@ def main():
             print("Chương trình tính thuế thu nhập cá nhân")
             print()
             ten_nguoi_tinh_thue = input("Nhập tên của bạn: ")
+            so_thue_tam_nop = int(input("Nhập số tiền thuế bạn đã nộp tạm (triệu VNĐ): "))
             ten_nguoi_tinh_thue_folder = convert(ten_nguoi_tinh_thue.lower().replace(" ", "_"))
             # tạo thư mục output nếu chưa có
             if not os.path.exists("output"):
@@ -68,11 +70,30 @@ def main():
                         table.align["Tháng"] = "c"
                         with open(f"output/{ten_nguoi_tinh_thue_folder}/{ten_nguoi_tinh_thue_folder}_tienThue{nam}.txt", "w") as f:
                             f.write(str(table))
+                            f.write("\n")
+                            f.write(f"Thuế tạm nộp: {so_thue_tam_nop} triệu VND")
+                            if (tien_thue_ca_nam - so_thue_tam_nop * 1000000) > 0:
+                                f.write(f"Thuế TNCN còn phải nộp: {reformat_text(str(tien_thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND")
+                            else:
+                                f.write(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - tien_thue_ca_nam))} VND")
                         # Lưu bảng vào file có sẵn tienThueCacNam.txt
                         with open(f"output/{ten_nguoi_tinh_thue_folder}/{ten_nguoi_tinh_thue_folder}_tienThueCacNam.txt", "a") as f:
                             f.write(str(table))
+                            f.write("\n")
+                            f.write(f"Thuế tạm nộp: {so_thue_tam_nop} triệu VND")
+                            if (tien_thue_ca_nam - so_thue_tam_nop * 1000000) > 0:
+                                f.write(f"Thuế TNCN còn phải nộp: {reformat_text(str(tien_thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND")
+                            else:
+                                f.write(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - tien_thue_ca_nam))} VND")
                             f.write("\n\n")
                         print(table)
+                        print(f"{ten_nguoi_tinh_thue} đã nộp tạm {reformat_text(so_thue_tam_nop * 1000000)}  VND thuế TNCN năm {nam}")
+                        if (tien_thue_ca_nam - int(so_thue_tam_nop) * 1000000) > 0:
+                            print(f"Thuế TNCN còn phải nộp: {reformat_text(str(tien_thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND")
+                        else:
+                            print(
+                                f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - tien_thue_ca_nam))} VND")
+                        print("\n")
                         # dừng màn hình, bấm phím bất kỳ để tiếp tục
                         input("Nhấn phím bất kỳ để tiếp tục...")
                         os.system("cls")

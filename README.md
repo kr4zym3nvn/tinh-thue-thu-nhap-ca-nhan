@@ -2,7 +2,7 @@
 **English** | [Vietnamese](https://github.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/tree/vietnamese)
 ```
 []: # © 2022 Nguyễn Hữu Khoa x Lê Thảo Quyên
-[]: # Version: 1.0.0
+[]: # Version: 1.1.0
 []: # Date: 21 - 09 - 2022
 []: # Description: A small exercise of the Information Systems subject at school
 ```

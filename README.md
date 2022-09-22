@@ -43,6 +43,7 @@ Màn hình yêu cầu lựa chọn cách nhập dữ liệu
 Để nhập dữ liệu, hãy cập nhật file `input.txt` trong thư mục **input**
 
 Bạn có thể xem ví dụ trong file `input_test.txt`
+
 ![](https://raw.githubusercontent.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/master/img/input_test.png)
 
 Với mỗi dòng là dữ liệu của 1 tháng với 3 thông số liên quan được phân tách bởi _khoảng trắng_: **Thu nhập**, **Số người phụ thuộc và số tiền bảo hiểm đã đóng**

@@ -17,7 +17,6 @@ If the program crashes, please go through these steps:
 ```
 Windows
 python 3.x
-prettytable
 ```
 
 ## Introduction

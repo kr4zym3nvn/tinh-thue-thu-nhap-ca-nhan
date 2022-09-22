@@ -6,6 +6,7 @@ import os
 
 
 def cal_from_file(name_input, thue_ca_nam=0):
+    so_thue_tam_nop = input("Nhập số tiền thuế bạn đã nộp tạm (triệu VNĐ): ")
     name_folder = convert(name_input.lower().replace(" ", "_"))
     # tạo thư mục output nếu chưa có
     if not os.path.exists("output"):
@@ -42,14 +43,35 @@ def cal_from_file(name_input, thue_ca_nam=0):
                 # lưu file output vào thư mục output/{name_folder}
                     with open(f"output/{name_folder}/{name_folder}_tienThueNam{data_year[year_th]}.txt", "w") as fout:
                         fout.write(table.get_string())
-                        print("\n\n")
+                        fout.write("\n")
+                        fout.write(f"Thuế TNCN đã nộp tạm: {so_thue_tam_nop} triệu VNĐ")
+                        fout.write("\n")
+                        if (thue_ca_nam - int(so_thue_tam_nop) * 1000000) > 0:
+                            fout.write(f"Thuế TNCN còn phải nộp: {reformat_text(str(thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND")
+                        else:
+                            fout.write(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - thue_ca_nam))} VND")
+                        fout.write("\n")
                         fout.close()
                     with open(f"output/{name_folder}/{name_folder}_tienThueCacNam.txt", "a") as fin:
                         fin.write(table.get_string())
                         fin.write("\n\n")
+                        fout.write(f"Thuế TNCN đã nộp tạm: {so_thue_tam_nop} triệu VNĐ")
+                        fout.write("\n")
+                        if (thue_ca_nam - int(so_thue_tam_nop) * 1000000) > 0:
+                            fout.write(
+                                f"Thuế TNCN còn phải nộp: {reformat_text(str(thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND")
+                        else:
+                            fout.write(
+                                f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - thue_ca_nam))} VND")
+                        fout.write("\n")
                         fin.close()
                     print(table)
-                    print("\n\n")
+                    print(f"Thuế TNCN đã nộp tạm: {so_thue_tam_nop} triệu VNĐ")
+                    if (thue_ca_nam - int(so_thue_tam_nop) * 1000000) > 0:
+                        print(f"Thuế TNCN còn phải nộp: {reformat_text(str(thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND")
+                    else:
+                        print(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - thue_ca_nam))} VND")
+                    print("\n")
     print(f"Đã lưu file output vào thư mục output/{name_folder}\n")
     print("Cảm ơn bạn đã sử dụng chương trình của chúng tôi!\n")
     print("Chúc bạn có một ngày tốt lành!\n")

@@ -32,6 +32,11 @@ class TinhThue:
                 break
             except ValueError:
                 print("Vui lòng nhập số!")
+
+    def nhap_thong_tin_file(self, thu_nhap, so_nguoi_phu_thuoc, tien_bao_hiem):
+        self.thu_nhap = int(thu_nhap) * 1000000
+        self.so_nguoi_phu_thuoc = int(so_nguoi_phu_thuoc)
+        self.tien_bao_hiem = int(tien_bao_hiem) * 1000000
         self.thu_nhap_chiu_thue = self.thu_nhap - self.tien_bao_hiem - self.mien_tru - self.so_nguoi_phu_thuoc * 4400000
 
     def nhap_nam(self):
@@ -40,6 +45,7 @@ class TinhThue:
         print()
 
     def tinh_thue(self):
+        self.thu_nhap_chiu_thue = int(self.thu_nhap) - int(self.tien_bao_hiem) - int(self.mien_tru) - int(self.so_nguoi_phu_thuoc) * 4400000
         if self.thu_nhap_chiu_thue < 0:
             self.tien_thue_thang = 0
             self.thu_nhap_chiu_thue = 0

@@ -17,6 +17,7 @@ If the program crashes, please go through these steps:
 ```
 Windows
 python 3.x
+prettytable
 ```
 
 ## Introduction
@@ -31,6 +32,11 @@ The program is written based on the Vietnamese tax law.
 
 
 ## How to use
+
+Open Terminal or Command Prompt and type the following command:
+`pip install prettytable`
+
+Then run the program by typing the following command `python main.py` or double-clicking the file `run.bat` with administrator privileges.
 
 Double-click run.bat or run `python main.py` with administrator privileges
 

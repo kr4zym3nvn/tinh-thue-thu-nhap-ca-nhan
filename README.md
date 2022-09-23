@@ -1,5 +1,5 @@
 # A script for Calulating "Personal income". Driven by python
-**English** | [Vietnamese](https://github.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/tree/vietnamese)
+
 ```
 []: # © 2022 Nguyễn Hữu Khoa x Lê Thảo Quyên
 []: # Version: 1.1.0

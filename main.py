@@ -32,7 +32,13 @@ def main():
             print("Chương trình tính thuế thu nhập cá nhân")
             print()
             ten_nguoi_tinh_thue = input("Nhập tên của bạn: ")
-            so_thue_tam_nop = int(input("Nhập số tiền thuế bạn đã nộp tạm (triệu VNĐ): "))
+            while True:
+               try:
+                    so_thue_tam_nop = int(input("Nhập số tiền thuế bạn đã nộp tạm (triệu VNĐ): "))
+                    break
+               except ValueError:
+                    print("Bạn phải nhập số nguyên dương. Vui lòng nhập lại!")
+                    continue
             ten_nguoi_tinh_thue_folder = convert(ten_nguoi_tinh_thue.lower().replace(" ", "_"))
             # tạo thư mục output nếu chưa có
             if not os.path.exists("output"):
@@ -48,11 +54,25 @@ def main():
             for nam in tinh_thue.nam:
                 table = PrettyTable(title=f"Bảng tính thuế thu nhập cá nhân năm {nam} của {ten_nguoi_tinh_thue}")
                 table.field_names = ["Tháng", "Thu nhập cá nhân (VND)", "Thu nhập chịu thuế (VND)", "Tiền Thuế (VND)"]
-                print("Bạn đang nhập thu nhập năm", nam)
+                while True:
+                    try:
+                        phu_thuoc = int(input(f"Nhập số người phụ thuộc năm {nam}: "))
+                        break
+                    except ValueError:
+                        print("Bạn phải nhập số nguyên dương. Vui lòng nhập lại!")
+                        continue
+                while True:
+                    try:
+                        bao_hiem_xa_hoi = int(input(f"Nhập số tiền bảo hiểm xã hội năm {nam} (triệu VNĐ): "))
+                        break
+                    except ValueError:
+                        print("Bạn phải nhập số nguyên dương. Vui lòng nhập lại!")
+                        continue
+                print("Bạn đang nhập thu năm", nam)
                 print("Đơn vị tính: triệu VND")
                 print()
                 for thang in tinh_thue.thang:
-                    tinh_thue.nhap_thong_tin(thang)
+                    tinh_thue.nhap_thong_tin(thang, phu_thuoc, bao_hiem_xa_hoi)
                     tinh_thue.tinh_thue()
                     tien_thue_hang_thang = {"Thang": thang, "Tien thue": tinh_thue.tien_thue_thang}
                     tinh_thue.thong_ke_tien_thue_cac_nam.append(tien_thue_hang_thang)

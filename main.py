@@ -103,7 +103,7 @@ def main():
                         table.add_row(["", "", f"Tổng thuế TNCN cả năm {nam}", reformat_text(str(tien_thue_ca_nam))])
                         # cột Tháng căn giữa
                         table.align["Tháng"] = "c"
-                        with open(f"output/{ten_nguoi_tinh_thue_folder}/{ten_nguoi_tinh_thue_folder}_tienThue{nam}.txt",
+                        with open(f"output/{ten_nguoi_tinh_thue_folder}/{ten_nguoi_tinh_thue_folder}_tienThueNam{nam}.txt",
                                   "w") as f:
                             f.write(str(table))
                             f.write("\n")

@@ -128,4 +128,6 @@ def main():
 
         elif choice == "3":
             print("Cảm ơn bạn đã sử dụng chương trình!")
+            input()
+            break
 main()

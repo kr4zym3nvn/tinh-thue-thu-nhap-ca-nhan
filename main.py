@@ -3,33 +3,38 @@ from tinhthue import TinhThue
 from remove_accent_vietnamese import convert
 from cal_from_file import cal_from_file
 from add_dot_int import reformat_text
+from read_file_output import read_file_output
 import os
 
 
 def main():
+    os.system("cls")
     print()
     print("Chương trình tính thuế thu nhập cá nhân")
     print()
     print("Chọn cách nhập dữ liệu: ")
     print("1. Nhập dữ liệu từ file")
     print("2. Nhập dữ liệu từ bàn phím")
-    print("3. Thoát")
+    print("3. Đọc kết quả đã tính thuế")
+    print("4. Thoát")
+
     print()
     choice = input("Nhập lựa chọn của bạn: ")
 
     while True:
         if choice == "1":
             os.system("cls")
-            print("Chương trình tính thuế thu nhập cá nhân")
+            print("Chương trình tính thuế thu nhập cá nhân - Đọc dữ liệu từ file")
             print()
             ten_nguoi_tinh_thue = input("Nhập tên của bạn: ")
 
             cal_from_file(ten_nguoi_tinh_thue)
-            break
+            # trở lại menu chọn chức năng
+            main()
 
         elif choice == "2":
             os.system("cls")
-            print("Chương trình tính thuế thu nhập cá nhân")
+            print("Chương trình tính thuế thu nhập cá nhân nhập dữ liệu từ bàn phím")
             print()
             ten_nguoi_tinh_thue = input("Nhập tên của bạn: ")
             while True:
@@ -113,20 +118,25 @@ def main():
                         else:
                             print(
                                 f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - tien_thue_ca_nam))} VND")
-                        print("\n")
-                        # dừng màn hình, bấm phím bất kỳ để tiếp tục
-                        print(f"Đã lưu file output vào thư mục output/{name_folder}\n")
+
+                        print(f"Đã lưu file output vào thư mục output/{ten_nguoi_tinh_thue_folder}\n")
                         input("Nhấn phím bất kỳ để tiếp tục...")
                         os.system("cls")
             continue_cal = input("Bạn có muốn tiếp tục tính thuế không? (Y/N): ").lower()
             if continue_cal == "y":
                 continue
             else:
-                print("Cảm ơn bạn đã sử dụng chương trình!")
-                input()
-                break
+                input("Enter để quay lại menu chính...")
+                main()
 
         elif choice == "3":
+            # Đọc file output
+            os.system("cls")
+            print("Đọc file output")
+            name_input = convert(input("Nhập tên người bạn muốn xem: ").lower().replace(" ", "_"))
+            read_file_output(name_input)
+            main()
+        elif choice == "4":
             print("Cảm ơn bạn đã sử dụng chương trình!")
             input()
             break

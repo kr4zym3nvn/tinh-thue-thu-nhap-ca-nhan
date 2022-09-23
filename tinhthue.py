@@ -13,30 +13,18 @@ class TinhThue:
     def __init__(self):
         pass
 
-    def nhap_thong_tin(self, month):
+    def nhap_thong_tin(self, month, phu_thuoc, bao_hiem):
         while True:
             try:
                 self.thu_nhap = int(input("Nhập thu nhập tháng " + str(month) + ": ")) * 1000000
                 break
             except ValueError:
                 print("Vui lòng nhập số!")
-        while True:
-            try:
-                self.so_nguoi_phu_thuoc = int(input("Nhập số người phụ thuộc: "))
-                break
-            except ValueError:
-                print("Vui lòng nhập số!")
-        while True:
-            try:
-                self.tien_bao_hiem = int(input("Nhập tiền bảo hiểm: ")) * 1000000
-                break
-            except ValueError:
-                print("Vui lòng nhập số!")
+        self.so_nguoi_phu_thuoc = int(phu_thuoc)
+        self.tien_bao_hiem = int(bao_hiem) * 1000000
 
-    def nhap_thong_tin_file(self, thu_nhap, so_nguoi_phu_thuoc, tien_bao_hiem):
+    def nhap_thong_tin_file(self, thu_nhap):
         self.thu_nhap = int(thu_nhap) * 1000000
-        self.so_nguoi_phu_thuoc = int(so_nguoi_phu_thuoc)
-        self.tien_bao_hiem = int(tien_bao_hiem) * 1000000
         self.thu_nhap_chiu_thue = self.thu_nhap - self.tien_bao_hiem - self.mien_tru - self.so_nguoi_phu_thuoc * 4400000
 
     def nhap_nam(self):

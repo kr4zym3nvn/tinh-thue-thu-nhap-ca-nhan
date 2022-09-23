@@ -40,7 +40,7 @@ Then run the program by typing the following command `python main.py` or double-
 Double-click run.bat or run `python main.py` with administrator privileges
 
 The program will ask you to choose how to calculate
-![](https://raw.githubusercontent.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/master/img/menu_choice.png)
+![](https://raw.githubusercontent.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/master/img/menu_choice%20(f).png)
 
 ### How input data from file
 To import data, update the `input.txt` file in the **input** directory

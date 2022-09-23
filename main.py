@@ -9,14 +9,14 @@ import time
 import os
 
 
-def set_font():
+def set_up_terminal():
     os.system("mode con: cols=120 lines=30")
     os.system("title Chương trình tự động tính thuế TNCN")
     os.system("cls")
 
 
 def main():
-    set_font()
+    set_up_terminal()
     print()
     print("Chương trình tính thuế thu nhập cá nhân")
     print()

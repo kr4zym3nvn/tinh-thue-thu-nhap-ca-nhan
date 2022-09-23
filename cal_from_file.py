@@ -2,6 +2,7 @@ from prettytable import PrettyTable
 from tinhthue import TinhThue
 from add_dot_int import reformat_text
 from remove_accent_vietnamese import convert
+import datetime
 import os
 
 
@@ -46,16 +47,17 @@ def cal_from_file(name_input, thue_ca_nam=0):
         # cột Tháng căn giữa
             table.align["Tháng"] = "c"
         # lưu file output vào thư mục output/{name_folder}
+            now = datetime.datetime.now()
             with open(f"output/{name_folder}/{name_folder}_tienThueNam{data_year[0]}.txt", "w") as fout:
                 fout.write(table.get_string())
-                fout.write("\n")
-                fout.write(f"Thuế TNCN đã nộp tạm: {so_thue_tam_nop} triệu VNĐ")
+                fout.write(f"\n\nThuế TNCN đã nộp tạm: {so_thue_tam_nop} triệu VNĐ")
                 fout.write("\n")
                 if (thue_ca_nam - int(so_thue_tam_nop) * 1000000) > 0:
-                    fout.write(f"Thuế TNCN còn phải nộp: {reformat_text(str(thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND")
+                    fout.write(f"Thuế TNCN còn phải nộp: {reformat_text(str(thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND\n")
                 else:
-                    fout.write(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - thue_ca_nam))} VND")
+                    fout.write(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - thue_ca_nam))} VND \n")
                 fout.write("\n")
+                fout.write(f"Ngày tạo file: {now.day}/{now.month}/{now.year} {now.hour}:{now.minute}:{now.second}\n")
                 fout.close()
             with open(f"output/{name_folder}/{name_folder}_tienThueCacNam.txt", "a") as fin:
                 fin.write(table.get_string())
@@ -67,14 +69,17 @@ def cal_from_file(name_input, thue_ca_nam=0):
                 else:
                     fin.write(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - thue_ca_nam))} VND")
                 fin.write("\n")
+                fin.write(f"Ngày tạo file: {now.day}/{now.month}/{now.year} {now.hour}:{now.minute}:{now.second}\n")
                 fin.close()
             print(table)
-            print(f"Thuế TNCN đã nộp tạm: {so_thue_tam_nop} triệu VNĐ")
+            print(f"\nThuế TNCN đã nộp tạm: {so_thue_tam_nop} triệu VNĐ")
             if (thue_ca_nam - int(so_thue_tam_nop) * 1000000) > 0:
                 print(f"Thuế TNCN còn phải nộp: {reformat_text(str(thue_ca_nam - int(so_thue_tam_nop) * 1000000))} VND")
             else:
                 print(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - thue_ca_nam))} VND")
             print("\n")
+            # in ra màn hình thời gian hiện tại
+            print("Ngày tạo file: ", now.strftime("%d-%m-%Y %H:%M:%S"))
     print(f"Đã lưu file output vào thư mục output/{name_folder}\n")
     input("Nhấn Enter để trở lại menu chính")
 

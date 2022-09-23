@@ -30,7 +30,6 @@ class TinhThue:
     def nhap_nam(self):
         print("Nhập những năm bạn muốn tính thuế ")
         self.nam = [int(x) for x in input().split()]
-        print()
 
     def tinh_thue(self):
         self.thu_nhap_chiu_thue = int(self.thu_nhap) - int(self.tien_bao_hiem) - int(self.mien_tru) - int(self.so_nguoi_phu_thuoc) * 4400000

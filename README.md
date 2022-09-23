@@ -2,7 +2,7 @@
 
 ```
 []: # © 2022 Nguyễn Hữu Khoa x Lê Thảo Quyên
-[]: # Version: 1.1.0
+[]: # Version: 1.1.1
 []: # Date: 21 - 09 - 2022
 []: # Description: A small exercise of the Information Systems subject at school
 ```

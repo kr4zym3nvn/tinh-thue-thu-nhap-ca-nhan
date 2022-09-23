@@ -56,7 +56,7 @@ Each of the following 12 lines is the data **Income** of 12 months.
 `input_test.txt`
 
 ### How input data from keyboard
-The program will ask you to enter the data for each month.![img](https://raw.githubusercontent.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/master/img/input_keyboard.png)
+The program will ask you to enter the data for each month.![img](https://raw.githubusercontent.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/master/img/input_keyboard(f).png)
 
 After doing what the program asks you will get a statistics table like below along with the txt file in the ```output/{your_name}``` folder
 

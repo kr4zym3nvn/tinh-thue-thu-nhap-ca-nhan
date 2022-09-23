@@ -76,9 +76,7 @@ def cal_from_file(name_input, thue_ca_nam=0):
                 print(f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - thue_ca_nam))} VND")
             print("\n")
     print(f"Đã lưu file output vào thư mục output/{name_folder}\n")
-    print("Cảm ơn bạn đã sử dụng chương trình của chúng tôi!\n")
-    print("Chúc bạn có một ngày tốt lành!\n")
-    input("Nhấn Enter để thoát chương trình\n")
+    input("Nhấn Enter để trở lại menu chính")
 
 
 

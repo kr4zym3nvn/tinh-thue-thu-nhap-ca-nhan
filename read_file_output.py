@@ -32,10 +32,9 @@ def read_file_output(name):
         with open(f"output/{name}/{os.listdir(f'output/{name}')[file - 1]}", "r") as f:
             print(f.read())
         # hiển thị dữ liệu
-        print("Bạn có muốn đọc thêm file khác không?")
+        print("\nBạn có muốn đọc thêm file khác không?")
         print("1. Có")
-        print("2. Không")
-        print("3. Quay lại menu chính")
+        print("2. Không, tôi muốn quay về Menu chính")
         choice = input("Nhập lựa chọn của bạn: ")
         if choice == "2":
             return False

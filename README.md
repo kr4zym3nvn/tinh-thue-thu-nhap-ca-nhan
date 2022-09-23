@@ -48,9 +48,10 @@ To import data, update the `input.txt` file in the **input** directory
 You can see the example in the `input_test.txt` file.
 
 With the first line being the years you want to calculate.
-Each of the following 12 lines is the data of 12 months with 3 related parameters separated by `spaces`: **Income**, **number of dependents and amount of insurance paid**
+The next 2 lines are the number of dependents along with the paid social insurance money.
+Each of the following 12 lines is the data **Income** of 12 months.
 
-![](https://raw.githubusercontent.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/master/img/input_test.png)
+![](https://raw.githubusercontent.com/kr4zym3nvn/tinh-thue-thu-nhap-ca-nhan/master/img/input_test(f).png)
 
 `input_test.txt`
 

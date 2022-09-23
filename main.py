@@ -163,6 +163,7 @@ def main():
             # delay 3s rồi thoát
             time.sleep(3)
             return False
+    exit()
 
 
 main()

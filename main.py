@@ -115,6 +115,7 @@ def main():
                                 f"Tiền được nhận lại: {reformat_text(str(int(so_thue_tam_nop) * 1000000 - tien_thue_ca_nam))} VND")
                         print("\n")
                         # dừng màn hình, bấm phím bất kỳ để tiếp tục
+                        print(f"Đã lưu file output vào thư mục output/{name_folder}\n")
                         input("Nhấn phím bất kỳ để tiếp tục...")
                         os.system("cls")
             continue_cal = input("Bạn có muốn tiếp tục tính thuế không? (Y/N): ").lower()
@@ -122,6 +123,7 @@ def main():
                 continue
             else:
                 print("Cảm ơn bạn đã sử dụng chương trình!")
+                input()
                 break
 
         elif choice == "3":

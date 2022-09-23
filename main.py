@@ -1,6 +1,6 @@
 from prettytable import PrettyTable
 from tinhthue import TinhThue
-from no_accent_vietnamese import convert
+from remove_accent_vietnamese import convert
 from cal_from_file import cal_from_file
 from add_dot_int import reformat_text
 import os
